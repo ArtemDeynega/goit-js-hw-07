@@ -32,4 +32,4 @@ const createListItem = images.map(image => {
   return itemEl;
 });
 
-listEl.append(...createListItem);
+listEl.prepend(...createListItem);
