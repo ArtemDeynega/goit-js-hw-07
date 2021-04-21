@@ -17,12 +17,14 @@ const images = [
 ];
 const listEl = document.getElementById('gallery');
 
+listEl.style.listStyle = 'none';
 listEl.style.display = 'flex';
 listEl.style.justifyContent = 'space-between';
 listEl.style.alignItems = 'center';
 
 const createListItem = images.map(image => {
   const itemEl = document.createElement('li');
+
   itemEl.insertAdjacentHTML(
     'afterbegin',
     `<img src='${image.url} alt='${image.alt} width='300px'''>`,
