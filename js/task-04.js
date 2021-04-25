@@ -14,11 +14,11 @@ const ref = {
   valueEl: document.querySelector('#value'),
 };
 
-ref.decrementBtn.addEventListener('click', () => {
-  counterValue.decrement();
-  ref.valueEl.textContent = counterValue.value;
-});
 ref.incrementBtn.addEventListener('click', () => {
   counterValue.increment();
+  ref.valueEl.textContent = counterValue.value;
+});
+ref.decrementBtn.addEventListener('click', () => {
+  counterValue.decrement();
   ref.valueEl.textContent = counterValue.value;
 });
