@@ -17,6 +17,11 @@ const images = [
 ];
 const listEl = document.getElementById('gallery');
 
+// listEl.setAttribute('list-style', 'none');
+// listEl.setAttribute('display', 'flex');
+// listEl.setAttribute('justifyContent', 'space-between');
+// listEl.setAttribute('alignItems', 'center');
+
 listEl.style.listStyle = 'none';
 listEl.style.display = 'flex';
 listEl.style.justifyContent = 'space-between';
