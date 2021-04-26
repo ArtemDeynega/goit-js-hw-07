@@ -106,15 +106,23 @@ refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdrop.addEventListener('click', onBackdropClick);
 
 function onOpenModal() {
+  window.addEventListener('keydown', onEscKeyDown);
   document.body.classList.add('show-modal');
 }
 
 function onCloseModal() {
+  window.removeEventListener('keydown', onEscKeyDown);
   document.body.classList.remove('show-modal');
 }
 
 function onBackdropClick(event) {
   if (event.currentTarget === event.target) {
+    onCloseModal();
+  }
+}
+
+function onEscKeyDown(event) {
+  if (event.code === 'Escape') {
     onCloseModal();
   }
 }
