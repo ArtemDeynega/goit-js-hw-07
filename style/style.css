@@ -1,4 +1,4 @@
-body.show-modal .backdrop {
+/* body.show-modal .backdrop {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
@@ -36,4 +36,14 @@ body.show-modal .modal {
 
   transform: scale(1.1);
   transition: transform 200ms ease-in-out;
+} */
+
+.valid {
+  border-color: blue;
+}
+.no-valid {
+  border-color: red;
+}
+input:focus {
+  outline: none;
 }
