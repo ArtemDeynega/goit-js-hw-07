@@ -3,9 +3,9 @@ const refEl = {
   spanEl: document.querySelector('#name-output'),
 };
 
-refEl.inputEl.addEventListener('input', inputMessage);
+refEl.inputEl.addEventListener('input', handleInputMessage);
 
-function inputMessage(message) {
+function handleInputMessage(message) {
   refEl.spanEl.textContent =
     message.currentTarget.value === ''
       ? 'незнакомец'
