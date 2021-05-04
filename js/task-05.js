@@ -1,12 +1,11 @@
-const refEl = {
-  inputEl: document.querySelector('#name-input'),
-  spanEl: document.querySelector('#name-output'),
+const ref = {
+  inputEl: document.getElementById('name-input'),
+  outputEl: document.getElementById('name-output'),
 };
+ref.inputEl.addEventListener('input', inputMessage);
 
-refEl.inputEl.addEventListener('input', handleInputMessage);
-
-function handleInputMessage(message) {
-  refEl.spanEl.textContent =
+function inputMessage(message) {
+  ref.outputEl.textContent =
     message.currentTarget.value === ''
       ? 'незнакомец'
       : message.currentTarget.value;

@@ -17,24 +17,17 @@ const images = [
 ];
 const listEl = document.getElementById('gallery');
 
-// listEl.setAttribute('list-style', 'none');
-// listEl.setAttribute('display', 'flex');
-// listEl.setAttribute('justifyContent', 'space-between');
-// listEl.setAttribute('alignItems', 'center');
-
-listEl.style.listStyle = 'none';
 listEl.style.display = 'flex';
 listEl.style.justifyContent = 'space-between';
+listEl.style.listStyle = 'none';
 listEl.style.alignItems = 'center';
 
 const createListItem = images.map(image => {
   const itemEl = document.createElement('li');
-
   itemEl.insertAdjacentHTML(
-    'afterbegin',
-    `<img src='${image.url} alt='${image.alt} width='300px'''>`,
+    'beforeend',
+    `<img src='${image.url}' alt='${image.alt}' width='300px'>`,
   );
   return itemEl;
 });
-
-listEl.prepend(...createListItem);
+listEl.append(...createListItem);

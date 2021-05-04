@@ -1,8 +1,8 @@
-const refs = {
+const ref = {
   inputEl: document.getElementById('font-size-control'),
-  spanEl: document.getElementById('text'),
+  textEl: document.getElementById('text'),
 };
 
-refs.inputEl.addEventListener('input', size => {
-  refs.spanEl.style.fontSize = `${size.currentTarget.value}px`;
+ref.inputEl.addEventListener('input', elem => {
+  ref.textEl.style.fontSize = `${elem.currentTarget.value}px`;
 });

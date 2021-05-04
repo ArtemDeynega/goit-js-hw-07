@@ -6,12 +6,13 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-const listId = document.querySelector('#ingredients');
 
-const craeteListItem = ingredients.map(ingredient => {
+const ingredientsEl = document.querySelector('#ingredients');
+
+const craeteListItem = ingredients.map(elem => {
   const itemEl = document.createElement('li');
-  itemEl.textContent = ingredient;
+  itemEl.textContent = elem;
   return itemEl;
 });
 
-listId.append(...craeteListItem);
+ingredientsEl.append(...craeteListItem);
